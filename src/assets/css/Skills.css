@@ -1,0 +1,10 @@
+#skills{
+    /* background-color: red; */
+    height: 50vh;
+    /* background: linear-gradient(90deg, rgb(209, 213, 219) 0%, rgb(160, 174, 192) 100%); */
+
+}
+.linear-gradient-button {
+    background: linear-gradient(90deg, rgb(169, 147, 254) 0%, rgb(126, 97, 239) 100%);
+  }
+  

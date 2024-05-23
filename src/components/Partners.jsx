@@ -22,7 +22,8 @@ const Partners = () => {
       name: "Apex Collectors ",
       description: "Vestibulum vel consectetur libero, sit amet vestibulum eros. Nullam efficitur bibendum enim sit amet.",
       roles: ["DevOps", "UI design"]
-    }
+    },
+  
   ];
 
   const settings = {
@@ -30,14 +31,16 @@ const Partners = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000, 
   };
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className=" py-16"> 
       <div className="container mx-auto rounded-lg shadow-md overflow-hidden">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">  Work Experience</h2>
-        <div className="max-w-screen-lg mx-auto"> {/* Add this wrapper with max width */}
+        <h2 className="text-4xl font-bold text-center text-white-800 mb-8">Work Experience</h2>
+        <div className="mx-auto border-t-2 border-b-2 border-gray-400"> 
           <Slider {...settings}>
             {partners.map((partner, index) => (
               <PartnerCard key={index} {...partner} />
@@ -52,9 +55,9 @@ const Partners = () => {
 const PartnerCard = ({ image, name, description, roles }) => {
   return (
     <div className="p-6 flex flex-col md:flex-row items-center">
-      <div className="w-full md:w-1/2 md:pr-4 flex items-center"> {/* Adjusted this div */}
-        <img src={image} alt={name} className="w-8 h-8 mr-5 md:w-10 md:h-10 mr-4 md:mr-0" /> {/* Adjusted image size */}
-        <div>
+      <div className="w-full md:w-1/2 md:pr-4 flex items-center">
+        <img src={image} alt={name} className="w-8 h-8 mr-5 md:w-10 md:h-10 mr-4 md:mr-0" />
+        <div className='ml-7'>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">{name}</h3>
           <p className="text-gray-600">{description}</p>
         </div>

@@ -1,0 +1,65 @@
+/* hero.css */
+
+/* Define the initial state of the section */
+#hero {
+    opacity: 0;
+    transform: translateY(10px); /* Initially, move the section down by 10 pixels */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transitions for opacity and transform properties */
+  }
+  
+  /* Define the animation when the section becomes visible */
+  #hero.animate-hero {
+    opacity: 1;
+    transform: translateY(0); /* Move the section back to its original position */
+  }
+
+/* hero.css */
+
+
+
+/* hero.css */
+
+/* Ensure the image is responsive */
+.img-container {
+    width: 100%;
+  }
+  
+  .img-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+/* Define animation for the icon */
+@keyframes slideLeft {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .icon {
+    animation: slideLeft 0.5s ease forwards;
+    opacity: 0; 
+  }
+  
+  .icon:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .icon:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .icon:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .icon:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
